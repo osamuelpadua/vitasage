@@ -180,12 +180,12 @@
                   </p>
 
                   <div class="science-standards__actions">
-                    <button class="science-pill" type="button">
+                    <span class="science-pill">
                       Scientific platform
-                    </button>
-                    <button class="science-pill" type="button">
+                    </span>
+                    <span class="science-pill">
                       Technology overview
-                    </button>
+                    </span>
                   </div>
                 </div>
 
@@ -237,12 +237,12 @@
               </p>
 
               <div class="platform-card__actions">
-                <button class="platform-pill platform-pill--solid" type="button">
+                <a class="platform-pill platform-pill--solid" href="#contact-form">
                   Strategic Contact
-                </button>
-                <button class="platform-pill platform-pill--ghost" type="button">
+                </a>
+                <a class="platform-pill platform-pill--ghost" href="#product-concept">
                   Learn more
-                </button>
+                </a>
               </div>
             </div>
           </article>
@@ -264,7 +264,11 @@
         </div>
       </section>
 
-      <section class="concept-section container" aria-labelledby="concept-title">
+      <section
+        class="concept-section container"
+        id="product-concept"
+        aria-labelledby="concept-title"
+      >
         <div class="concept-header">
           <p class="concept-tagline">Product Concept</p>
 
@@ -336,6 +340,17 @@
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="contact-divider" aria-hidden="true">
+          <svg
+            class="contact-divider__shape"
+            viewBox="0 0 234 110"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 46.4089H24.9591C36.6972 46.4089 48.1738 42.9413 57.9479 36.4413L77.8521 23.2045L86.9134 17.8335C105.289 6.9417 128.293 7.60293 146.013 19.5323L151.467 23.2045L176.051 37.9362C185.303 43.4805 195.887 46.4089 206.673 46.4089H234V110H0V46.4089Z"
+              fill="currentColor"
+            />
+          </svg>
           <div class="contact-divider__circle">
             <svg
               class="contact-divider__arrow"
@@ -407,6 +422,7 @@
 
             <form
               class="contact-form"
+              id="contact-form"
               action="send.php"
               method="post"
               data-contact-form
@@ -468,17 +484,21 @@
         </p>
 
         <div class="footer-logos" aria-label="Brand logos">
-          <img
-            src="IMG/logo-footer1.svg"
-            alt="Vitasage logo"
-            class="footer-logo footer-logo--vitasage"
-          />
+          <a class="footer-logo-link" href="index2.html" aria-label="Go to Vitasage page">
+            <img
+              src="IMG/logo-footer1.svg"
+              alt="Vitasage logo"
+              class="footer-logo footer-logo--vitasage"
+            />
+          </a>
           <span class="footer-logos__divider" aria-hidden="true"></span>
-          <img
-            src="IMG/logo-footer2.svg"
-            alt="Cubexa logo"
-            class="footer-logo footer-logo--cubexa"
-          />
+          <a class="footer-logo-link" href="index.html" aria-label="Go to Cubexa page">
+            <img
+              src="IMG/logo-footer2.svg"
+              alt="Cubexa logo"
+              class="footer-logo footer-logo--cubexa"
+            />
+          </a>
         </div>
       </div>
     </footer>
