@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-const CONTACT_RECIPIENT = 'contato@vitalagro.com.br';
+const CONTACT_RECIPIENT = 'eduardo@vitasage.com';
 
 header('Content-Type: application/json; charset=UTF-8');
 
