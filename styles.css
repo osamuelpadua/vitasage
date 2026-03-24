@@ -947,15 +947,11 @@ button {
   --contact-divider-circle-top: 28px;
   --contact-divider-circle-size: 58px;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: var(--contact-divider-offset-y);
+  left: calc(50% - (var(--contact-divider-width) / 2));
   width: var(--contact-divider-width);
   height: var(--contact-divider-height);
-  margin-left: auto;
-  margin-right: auto;
   z-index: 2;
-  transform: translateY(var(--contact-divider-offset-y));
   pointer-events: none;
 }
 
@@ -972,14 +968,11 @@ button {
 .contact-divider__circle {
   position: absolute;
   top: var(--contact-divider-circle-top);
-  left: 0;
-  right: 0;
+  left: calc(50% - (var(--contact-divider-circle-size) / 2));
   display: grid;
   place-items: center;
   width: var(--contact-divider-circle-size);
   height: var(--contact-divider-circle-size);
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 50%;
   background: var(--color-surface);
   color: var(--color-muted);

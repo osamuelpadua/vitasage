@@ -251,15 +251,11 @@ p {
   --hero-divider-circle-top: 28px;
   --hero-divider-circle-size: 58px;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: var(--hero-divider-offset-y);
+  left: calc(50% - (var(--hero-divider-width) / 2));
   width: var(--hero-divider-width);
   height: var(--hero-divider-height);
-  margin-left: auto;
-  margin-right: auto;
   z-index: 2;
-  transform: translateY(var(--hero-divider-offset-y));
   pointer-events: none;
 }
 
@@ -276,14 +272,11 @@ p {
 .hero-divider__circle {
   position: absolute;
   top: var(--hero-divider-circle-top);
-  left: 0;
-  right: 0;
+  left: calc(50% - (var(--hero-divider-circle-size) / 2));
   display: grid;
   place-items: center;
   width: var(--hero-divider-circle-size);
   height: var(--hero-divider-circle-size);
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 50%;
   background: var(--color-surface-strong);
   color: rgba(47, 79, 76, 0.8);
@@ -897,13 +890,13 @@ p {
   .hero-divider {
     --hero-divider-width: 214px;
     --hero-divider-height: 101px;
-    --hero-divider-offset-y: -42px;
+    --hero-divider-offset-y: -24px;
     --hero-divider-circle-top: 24px;
   }
 
   .about-section__inner {
     gap: 88px;
-    padding-top: 118px;
+    padding-top: 132px;
     padding-bottom: 88px;
   }
 
@@ -1030,7 +1023,11 @@ p {
   }
 
   .hero-actions {
-    margin-bottom: 28px;
+    margin-bottom: 36px;
+  }
+
+  .hero-divider {
+    --hero-divider-offset-y: -18px;
   }
 
   .hero-description {
@@ -1044,7 +1041,7 @@ p {
 
   .about-section__inner {
     gap: 72px;
-    padding-top: 104px;
+    padding-top: 126px;
     padding-bottom: 76px;
   }
 
