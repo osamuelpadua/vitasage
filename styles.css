@@ -948,16 +948,20 @@ button {
   --contact-divider-circle-size: 58px;
   position: absolute;
   top: var(--contact-divider-offset-y);
-  left: calc(50% - (var(--contact-divider-width) / 2));
-  width: var(--contact-divider-width);
+  left: 0;
+  right: 0;
   height: var(--contact-divider-height);
+  display: grid;
+  justify-items: center;
+  align-items: start;
   z-index: 2;
   pointer-events: none;
 }
 
 .contact-divider__shape {
+  grid-area: 1 / 1;
   display: block;
-  width: 100%;
+  width: var(--contact-divider-width);
   height: 100%;
 }
 
@@ -966,13 +970,12 @@ button {
 }
 
 .contact-divider__circle {
-  position: absolute;
-  top: var(--contact-divider-circle-top);
-  left: calc(50% - (var(--contact-divider-circle-size) / 2));
+  grid-area: 1 / 1;
   display: grid;
   place-items: center;
   width: var(--contact-divider-circle-size);
   height: var(--contact-divider-circle-size);
+  margin-top: var(--contact-divider-circle-top);
   border-radius: 50%;
   background: var(--color-surface);
   color: var(--color-muted);

@@ -252,16 +252,20 @@ p {
   --hero-divider-circle-size: 58px;
   position: absolute;
   top: var(--hero-divider-offset-y);
-  left: calc(50% - (var(--hero-divider-width) / 2));
-  width: var(--hero-divider-width);
+  left: 0;
+  right: 0;
   height: var(--hero-divider-height);
+  display: grid;
+  justify-items: center;
+  align-items: start;
   z-index: 2;
   pointer-events: none;
 }
 
 .hero-divider__shape {
+  grid-area: 1 / 1;
   display: block;
-  width: 100%;
+  width: var(--hero-divider-width);
   height: 100%;
 }
 
@@ -270,13 +274,12 @@ p {
 }
 
 .hero-divider__circle {
-  position: absolute;
-  top: var(--hero-divider-circle-top);
-  left: calc(50% - (var(--hero-divider-circle-size) / 2));
+  grid-area: 1 / 1;
   display: grid;
   place-items: center;
   width: var(--hero-divider-circle-size);
   height: var(--hero-divider-circle-size);
+  margin-top: var(--hero-divider-circle-top);
   border-radius: 50%;
   background: var(--color-surface-strong);
   color: rgba(47, 79, 76, 0.8);
