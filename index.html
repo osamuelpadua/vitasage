@@ -405,7 +405,13 @@
           <article class="contact-card">
             <h3 class="contact-card__title">Strategic Contact</h3>
 
-            <form class="contact-form" action="#" method="post">
+            <form
+              class="contact-form"
+              action="send.php"
+              method="post"
+              data-contact-form
+            >
+              <input type="hidden" name="source-page" value="Cubexa" />
               <div class="contact-form__field">
                 <label for="full-name">Full name</label>
                 <input id="full-name" name="full-name" type="text" />
@@ -432,10 +438,22 @@
               </div>
 
               <div class="contact-form__actions">
-                <button class="contact-form__button" type="submit">
+                <button
+                  class="contact-form__button"
+                  type="submit"
+                  data-submit-button
+                >
                   Start a Conversation
                 </button>
               </div>
+
+              <p
+                class="form-status"
+                data-form-status
+                aria-live="polite"
+                aria-atomic="true"
+                hidden
+              ></p>
             </form>
           </article>
         </div>
@@ -464,5 +482,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="contact-forms.js"></script>
   </body>
 </html>

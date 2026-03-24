@@ -1177,6 +1177,35 @@ button {
   box-shadow: var(--shadow-focus);
 }
 
+.contact-form__button:disabled {
+  cursor: wait;
+  opacity: 0.76;
+  transform: none;
+}
+
+.form-status {
+  grid-column: 1 / -1;
+  margin-top: 14px;
+  min-height: 1.5em;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.form-status[hidden] {
+  display: none;
+}
+
+.form-status.is-success {
+  color: #8bffba;
+}
+
+.form-status.is-error {
+  color: #ffd8d8;
+}
+
 .footer-section {
   background: var(--color-contact-card);
 }

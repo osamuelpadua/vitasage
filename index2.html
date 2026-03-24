@@ -229,7 +229,13 @@
           <article class="contact2-card">
             <h3 class="contact2-card__title">Strategic Contact</h3>
 
-            <form class="contact2-form" action="#" method="post">
+            <form
+              class="contact2-form"
+              action="send.php"
+              method="post"
+              data-contact-form
+            >
+              <input type="hidden" name="source-page" value="Vitasage" />
               <div class="contact2-form__field">
                 <label for="contact2-full-name">Full name</label>
                 <input
@@ -260,10 +266,22 @@
               </div>
 
               <div class="contact2-form__actions">
-                <button class="contact2-form__button" type="submit">
+                <button
+                  class="contact2-form__button"
+                  type="submit"
+                  data-submit-button
+                >
                   Start a Conversation
                 </button>
               </div>
+
+              <p
+                class="form-status"
+                data-form-status
+                aria-live="polite"
+                aria-atomic="true"
+                hidden
+              ></p>
             </form>
           </article>
         </div>
@@ -292,5 +310,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="contact-forms.js"></script>
   </body>
 </html>
