@@ -1026,11 +1026,11 @@ p {
   }
 
   .hero-actions {
-    margin-bottom: 36px;
+    margin-bottom: 44px;
   }
 
   .hero-divider {
-    --hero-divider-offset-y: -18px;
+    --hero-divider-offset-y: 6px;
   }
 
   .hero-description {
